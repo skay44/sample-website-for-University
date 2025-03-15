@@ -1,0 +1,6 @@
+DirectoryIndex front_controller.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ front_controller.php?action=/$1 [QSA]
+</IfModule>

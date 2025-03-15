@@ -1,0 +1,1 @@
+<img id="anim" src="static/graphics/note.png" alt="note" width="40" height="40"><span id="mainheader"> Produkcja muzyki</span>

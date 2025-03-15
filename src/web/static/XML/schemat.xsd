@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="produkcjaMuzyki" type="produkcjaMuzykiType"/>
+  
+  <xs:complexType name="produkcjaMuzykiType">
+    <xs:sequence>
+      <xs:element name="elektroniczne" type="elektroniczneType"/>
+      <xs:element name="fizyczne" type="fizyczneType"/>
+      <xs:element name="teoria" type="teoriaType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="elektroniczneType">
+    <xs:sequence>
+      <xs:element name="DAWs" type="DAWsType"/>
+      <xs:element name="pluginy" type="pluginyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DAWsType">
+    <xs:sequence>
+      <xs:element name="opis" type="długiTekst" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="DAW" type="DAWType" maxOccurs="unbounded">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DAWType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="cena" type="cenaType">
+        </xs:element>
+        <xs:sequence>
+          <xs:group ref="ceny_przedział"/>
+          <xs:element name="przewidywana">
+            <xs:simpleType>
+              <xs:union memberTypes="rozmiar_opisowy którkiZmiennoprzecinkowy" />
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:choice>
+      <xs:element name="wydawca" type="wydawcaType"/>
+    </xs:sequence>
+    <xs:attribute ref="nazwa"/>
+  </xs:complexType>
+  
+  <xs:complexType name="pluginyType">
+    <xs:sequence>
+      <xs:element name="opis" type="długiTekst" minOccurs="0" maxOccurs="1"></xs:element>
+      <xs:element name="plugin" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="DAWType">
+              <xs:sequence>
+                <xs:element name="dzialanie">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:choice maxOccurs="unbounded">
+                        <xs:element name="synteza" type="krótkiTekst" />
+                        <xs:element name="efekt" type="krótkiTekst" />
+                      </xs:choice>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="obraz" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:attribute name="src">
+                      <xs:simpleType>
+                        <xs:restriction base="krótkiTekst">
+                          <xs:pattern value="graphics/.*.png"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:attribute>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="typ">
+                <xs:simpleType>
+                  <xs:restriction base="krótkiTekst">
+                    <xs:enumeration value="efekt"/>
+                    <xs:enumeration value="generujacy"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fizyczneType">
+    <xs:sequence>
+      <xs:element name="kontrolery">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="kontroler" maxOccurs="unbounded" type="krótkiTekst"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="monitoryStudyjne">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="monitor" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="producent" type="krótkiTekst"/>
+                </xs:sequence>
+                <xs:attribute ref="nazwa"/>
+                <xs:attribute name="wersja" default="1">
+                  <xs:simpleType>
+                    <xs:union memberTypes="krótkaLiczba zbiórZnaków"/>
+                  </xs:simpleType>
+                </xs:attribute>
+                <xs:attribute name="wzmocnienie" type="wzmocnienieType">
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="teoriaType">
+    <xs:sequence>
+      <xs:element name="gatunki">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="gatunek" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="opis" type="długiTekst"/>
+                  <xs:element ref="artysci"/>
+                </xs:all>
+                <xs:attribute ref="nazwa"/>
+                <xs:attribute name="taneczny">
+                  <xs:simpleType>
+                    <xs:restriction base="krótkiTekst">
+                      <xs:enumeration value="tak"></xs:enumeration>
+                      <xs:enumeration value="nie"></xs:enumeration>
+                      <xs:enumeration value="nieokreslone"></xs:enumeration>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="artysci">
+    <xs:simpleType>
+      <xs:restriction base="stringList">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="5"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:simpleType name="stringList">
+    <xs:list itemType="oneString"></xs:list>
+  </xs:simpleType>
+  
+  <xs:simpleType name="oneString">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^\s]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:group name="ceny_przedział">
+    <xs:sequence>
+      <xs:element name="minCena" type="cenaType"/>
+      <xs:element name="maxCena" type="cenaType"/>
+    </xs:sequence>
+  </xs:group>
+
+
+  <xs:complexType name="cenaType">
+    <xs:simpleContent>
+      <xs:extension base="którkiZmiennoprzecinkowy">
+        <xs:attribute name="waluta" type="xs:string" default="zł" use="optional"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="rozmiar_opisowy">
+    <xs:restriction base="krótkiTekst">
+      <xs:enumeration value="dół"/>
+      <xs:enumeration value="średnia"/>
+      <xs:enumeration value="góra"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="wydawcaType">
+    <xs:simpleContent>
+      <xs:extension base="krótkiTekst">
+        <xs:attribute ref="link"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="zbiórZnaków">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="5"></xs:maxLength>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="krótkiTekst">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="300"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="długiTekst">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="którkiZmiennoprzecinkowy">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="krótkaLiczba">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="linkType">
+    <xs:restriction base="xs:anyURI">
+      <xs:minLength value="5"/>
+      <xs:maxLength value="300"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="wzmocnienieType">
+    <xs:restriction base="krótkiTekst">
+      <xs:enumeration value="aktywny"/>
+      <xs:enumeration value="pasywny"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+
+  <xs:attribute name="nazwa" type="xs:string"/>
+  <xs:attribute name="link" type="linkType"/>
+</xs:schema>

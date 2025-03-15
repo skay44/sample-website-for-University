@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ENTITY % g.nazwa 
+    "nazwa CDATA #REQUIRED">
+<!ENTITY % g.waluta 
+    "waluta CDATA #IMPLIED">
+<!ENTITY % g.link 
+    "link CDATA #REQUIRED">
+
+<!ELEMENT produkcjaMuzyki (elektroniczne, fizyczne, teoria)>
+<!ELEMENT elektroniczne (DAWs, pluginy)>
+<!ELEMENT fizyczne (kontrolery, monitoryStudyjne)>
+<!ELEMENT teoria (gatunki)>
+
+<!ELEMENT DAWs (opis,DAW+)>
+<!ELEMENT opis (#PCDATA)>
+<!ELEMENT DAW (((minCena, maxCena, przewidywana) | cena), wydawca)>
+<!ATTLIST DAW %g.nazwa;>
+<!ELEMENT minCena (#PCDATA) >
+<!ATTLIST minCena %g.waluta;>
+<!ELEMENT maxCena (#PCDATA) >
+<!ATTLIST maxCena %g.waluta;>
+<!ELEMENT przewidywana (#PCDATA) >
+<!ELEMENT cena (#PCDATA) >
+<!ATTLIST cena %g.waluta;>
+<!ELEMENT wydawca (#PCDATA) >
+<!ATTLIST wydawca %g.link;>
+
+<!ELEMENT pluginy (opis,plugin+)>
+<!ELEMENT plugin (((minCena, maxCena, przewidywana) | cena), wydawca, dzialanie, obraz)>
+<!ATTLIST plugin %g.nazwa;>
+<!ATTLIST plugin typ (generujacy | efekt) #REQUIRED>
+<!ELEMENT dzialanie (synteza*,efekt*)>
+<!ELEMENT synteza (#PCDATA)>
+<!ELEMENT efekt (#PCDATA)>
+<!ELEMENT obraz EMPTY>
+<!ATTLIST obraz src CDATA #REQUIRED>
+
+<!ELEMENT kontrolery (kontroler+)>
+<!ELEMENT kontroler (#PCDATA)>
+
+<!ELEMENT monitoryStudyjne (monitor+)>
+<!ELEMENT monitor (producent)>
+<!ATTLIST monitor %g.nazwa;>
+<!ATTLIST monitor wersja CDATA "1">
+<!ATTLIST monitor wzmocnienie (aktywny | pasywny) #REQUIRED>
+<!ELEMENT producent (#PCDATA)>
+
+<!ELEMENT gatunki (gatunek*)>
+<!ELEMENT gatunek ((opis,artysci)|(artysci,opis))>
+<!ATTLIST gatunek taneczny (nie | tak | nieokreslone) "nieokreslone">
+<!ATTLIST gatunek %g.nazwa;>
+<!ELEMENT artysci (#PCDATA)>

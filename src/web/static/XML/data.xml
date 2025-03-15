@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<produkcjaMuzyki xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemat.xsd">
+  <elektroniczne>
+    <DAWs>
+      <opis>
+        Daw, ang. digital audio interface, po polsku cyfrowa stacja robocza jest to program komputerowy przeznaczony do pracy z dźwiękiem, bardzo często wykorzystywany przy współczenej produkcji muzyki. Ich celem jest zastąpienie pełnowymiarowych konsol znajdujących się w studiach nagraniowych, tak aby większość obróbki dźwięku następowała na komputerze. Jest to rozwiązanie znacznie tańsze i wygodniejsze, a przede wszystkim bardziej dostępne dla ludzi pragnących zając się produkcją muzyki w sposób hobbistyczny.
+      </opis>
+      <DAW nazwa="FL Studio">
+        <minCena waluta="zł">
+          349.00
+        </minCena>
+        <maxCena waluta="zł">
+          2249.00
+        </maxCena>
+        <przewidywana>średnia</przewidywana>
+        <wydawca link="https://www.image-line.com/">
+          Image line
+        </wydawca>
+      </DAW>
+      
+      <DAW nazwa="Ableton Live">
+        <minCena waluta="eur">
+          79.00
+        </minCena>
+        <maxCena waluta="eur">
+          599.00
+        </maxCena>
+        <przewidywana>200.00</przewidywana>
+        <wydawca link="https://www.ableton.com/">
+          Ableton
+        </wydawca>
+      </DAW>
+      
+      <DAW nazwa="Logic Pro">
+        <cena waluta="usd">
+          199.99
+        </cena>
+        <wydawca link="https://www.apple.com/">
+          Apple
+        </wydawca>
+      </DAW>
+      
+      <DAW nazwa="Cubase">
+        <minCena waluta="zł">
+          469.76
+        </minCena>
+        <maxCena waluta="zł">
+          2720.16
+        </maxCena>
+        <przewidywana>góra</przewidywana>
+        <wydawca link="https://www.steinberg.net/">
+          Steinberg Media Technologies
+        </wydawca>
+      </DAW>
+      
+      <DAW nazwa="GarageBand">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.apple.com/">
+          Apple
+        </wydawca>
+      </DAW>
+    </DAWs>
+    
+    
+    <pluginy>
+      <opis>
+        Pluginy, pluginy VST (ang. Virtual Studio Technology), czyli podprogramy otwierane w środowisku zapewnianym przez DAW, których celem jest tworzenie lub modyfikowanie dźwięku a nawet więcej. Pluginy rozróżniamy przede wszystkim na generujące i nakładające efekty, zazwyczaj DAW wyróżnia osobne miejsca do załączena dla obu typów.
+      </opis>
+      <plugin nazwa="3x OSC" typ="generujacy">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.image-line.com/">
+          Image line
+        </wydawca>
+        <dzialanie>
+          <synteza>
+            oscylator
+          </synteza>
+          <synteza>
+            synteza AM
+          </synteza>
+          <efekt>
+            obwiednia
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(1).png"/>
+      </plugin>
+
+      <plugin nazwa="Serum" typ="generujacy">
+        <cena waluta="usd">
+          189.00
+        </cena>
+        <wydawca link="https://xferrecords.com/">
+          Xfer
+        </wydawca>
+        <dzialanie>
+          <synteza>
+            oscylator
+          </synteza>
+          <synteza>
+            synteza AM
+          </synteza>
+          <synteza>
+            synteza tablicowa
+          </synteza>
+          <synteza>
+            sampler
+          </synteza>
+          <efekt>
+            obwiednia
+          </efekt>
+          <efekt>
+            korektor
+          </efekt>
+          <efekt>
+            nasycenie
+          </efekt>
+          <efekt>
+            echo
+          </efekt>
+          <efekt>
+            pogłos
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(2).png"/>
+      </plugin>
+
+      <plugin nazwa="Ample Guitar" typ="generujacy">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.amplesound.net/en/index.asp">
+          Ample Sound
+        </wydawca>
+        <dzialanie>
+          <synteza>
+            sampler
+          </synteza>
+        </dzialanie>
+        <obraz src="graphics/fimg(3).png"/>
+      </plugin>
+
+      <plugin nazwa="BBC Symphony Orchestra" typ="generujacy">
+        <cena waluta="eur">
+          599.00
+        </cena>
+        <wydawca link="https://www.spitfireaudio.com/">
+          Spitfire Audio
+        </wydawca>
+        <dzialanie>
+          <synteza>
+            sampler
+          </synteza>
+        </dzialanie>
+        <obraz src="graphics/fimg(4).png"/>
+      </plugin>
+
+      <plugin nazwa="Kick 2" typ="generujacy">
+        <cena waluta="gbp">
+          29.97
+        </cena>
+        <wydawca link="https://www.sonicacademy.com/">
+          Sonic Academy
+        </wydawca>
+        <dzialanie>
+          <synteza>
+            oscylator
+          </synteza>
+          <synteza>
+            sampler
+          </synteza>
+          <efekt>
+            nasycenie
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(5).png"/>
+      </plugin>
+
+      <plugin nazwa="Fruity Parametric EQ 2" typ="efekt">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.image-line.com/">
+          Image Line
+        </wydawca>
+        <dzialanie>
+          <efekt>
+            korektor
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(6).png"/>
+      </plugin>
+
+      <plugin nazwa="Fruity Delay 3" typ="efekt">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.image-line.com/">
+          Image Line
+        </wydawca>
+        <dzialanie>
+          <efekt>
+            pogłos
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(7).png"/>
+      </plugin>
+
+      <plugin nazwa="Fruity Reeverb 2" typ="efekt">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.image-line.com/">
+          Image Line
+        </wydawca>
+        <dzialanie>
+          <efekt>
+            echo
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(8).png"/>
+      </plugin>
+
+      <plugin nazwa="Guitar Rig 6" typ="efekt">
+        <cena waluta="eur">
+          199.00
+        </cena>
+        <wydawca link="https://www.native-instruments.com/en/">
+          Native Instruments
+        </wydawca>
+        <dzialanie>
+          <efekt>
+            nasycenie
+          </efekt>
+          <efekt>
+            korektor
+          </efekt>
+          <efekt>
+            kompresor
+          </efekt>
+          <efekt>
+            pogłos
+          </efekt>
+          <efekt>
+            echo
+          </efekt>
+          <efekt>
+            filtr
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(9).png"/>
+      </plugin>
+
+      <plugin nazwa="iZotope Vinyl" typ="efekt">
+        <cena>
+          0
+        </cena>
+        <wydawca link="https://www.izotope.com/">
+          iZotope
+        </wydawca>
+        <dzialanie>
+          <synteza>
+            sampler
+          </synteza>
+          <efekt>
+            filtr
+          </efekt>
+        </dzialanie>
+        <obraz src="graphics/fimg(10).png"/>
+      </plugin>
+    </pluginy>
+  </elektroniczne>
+  
+  
+  <fizyczne>
+    <kontrolery>
+      <kontroler>
+        Klawisze MIDI
+      </kontroler>
+      <kontroler>
+        Drumpad MIDI
+      </kontroler>
+      <kontroler>
+        Gitara Elektryczna
+      </kontroler>
+      <kontroler>
+        Pianino Elektryczne
+      </kontroler>
+    </kontrolery>
+    <monitoryStudyjne>
+      <monitor nazwa="HS" wersja="8" wzmocnienie="aktywny">
+        <producent>
+          Yamaha
+        </producent>
+      </monitor>
+      <monitor nazwa="SCM" wersja="12" wzmocnienie="pasywny">
+        <producent>
+          ATC
+        </producent>
+      </monitor>
+      <monitor nazwa="HS" wersja="7" wzmocnienie="aktywny">
+        <producent>
+          Yamaha
+        </producent>
+      </monitor>
+      <monitor nazwa="Super Sound" wersja="5C" wzmocnienie="pasywny">
+        <producent>
+          Auratone
+        </producent>
+      </monitor>
+    </monitoryStudyjne>
+  </fizyczne>
+
+  <teoria>
+    <gatunki>
+      <gatunek taneczny="tak" nazwa="House">
+        <opis>
+          Jeden z najpopularniejszych gatunków muzyki, rywalizujący swoją poularnością z rockem, hip-hopem a takż szeroko pojętym popem. Charakteryzuje się rytmem "4 on the floor" w którym każdy beat jest akcentowany bębnem basowym/bębnem wielkim. Dodatkowo w co drugi beat wpleciony jest werbel, a pmiędzy uderzeniami bębna wybrzmiewają otwarte talerze. Nadaje to utworowi dynamiki i taneczności. Mimo to przez przez powtarzalność perkusji można nałożyć na nią spokojniejsze instrumenty i osiągnąć bardziej spokojne doznanie np. w deep house czy też fragmentach progresywnego houseu. W takiej sytuacji często używa się także elementów muzyki "soul". Jest też druga strona Housea ze swoimi bardziej dynamicznymi odmianami takimi jak Electro House, French House, Bounce House. Istnieje także big room house którego celem jest po prostu brzmieć jak najgłośniej i wydawać się jak największy. Nie jest to najlepszy wybór do tańczenia ale może okazać się dobrym wyborem np. na duże festiwale. Natomiast większość pozostałych odmian houseu jest wręcz idealna na parkiet.
+        </opis>
+        <artysci>Alan_Walker Daft_Punk deadmau5 Swedish_House_Mafia Owl_City</artysci>
+      </gatunek>
+      <gatunek taneczny="nie" nazwa="Hip-Hop/rap">
+        <artysci>Kendrick_Lamar Eminem Drake</artysci>
+        <opis>
+          Muzyka hip-hopowa wydaje się wciąż bardzo przyszłościowym wyborem mimo swojego już stosunkowo długiego czasu popularności. Zainteresowanie hip-hopem nie wydaje się spatać, zwłaszcza wśród młodzieży i młodszych dorosłych, dla których jest to najbardziej znana forma muzyczna. Charakteryzuje się naciskiem na klimat i przesłanie. Nie znajdziemy tutaj niezwykłego sound designu ani progresji akordów, za to dużo częściej spotkamy się z zapętlonymi fragmentami innych utworów z nałożonmi efektami, który nadaje charakter utworowi. Natomiast do przodu pchany jest dzięki dynamicznej perkusji, obfitującej w zamknięte talerze a także charakterystycznego basu 808. Hip-hop wymaga tekstu żeby być uznanym za godny uwagi, przez większość ludzi. Oczywiście z wyjątkami takimi jak lo-fi. Dla żeby zająć się tym gatunkiem muzyki będziemy musieli albo sprzedawać swoje bity inym raperom, albo znaleźć znajomego który potrafi wymyśleć dobry tekst, albo samemu umieć rapować. Większość producentów wybiera te pierwszą opcje skupiając się całkowicie na muzyce. Można powiedzieć że to najbardziej popularna ścieżka wśród początkujących muzyków.
+        </opis>
+      </gatunek>
+      <gatunek taneczny="nieokreslone" nazwa="DnB/DB/Glitch Hop">
+        <opis>
+          DnB - skrót od drum and bass, DB - skrót od dubstep. Aby dobrze zrozumieć czym jest Glitch - Hop czy Drum and Bass najpierw zajmijmy się Dubstepem. Co prawda Drum and Bass pierwotnie nie pochodzi od dubstepu, współczesny DnB posiada wiele jego cech. A więc od początku. Dubstep to gatunek muzyki pochodzący z Wielkiej Brytanii początkowo zupełnie inaczej brzmiący niż obecnie ale mający te same załżenie - duży nacisk na linie basową, która zarazem może być częścią rytmiczną a także melodyjną utworu. Dawniejsza forma dubstepu cechowała się bardzo dużą ilością basu proporcjonalnie do innych częstotliwości, a także ponurym klimatem i melanholią. Z czasem Dubstep zaczął się przeobrażać, w głośniejszy z większą ilością wyższych częstotliwości. Była to naturalna progresja ze względu że utwory głośniejsze, na pierwszy rzut oka ciekawsze budziły większe zainteresowanie. Zaczęła się era współczesnego dubstepu gdzie bass nadal stanowi główną część utworu, ale jest z dużo większą ilością harmonicznych, wypełniając spektrum dźwięków średnimi i wysokimi tonami. Dodatkowo większy nacisk spadł na perkusje. Taka forma dubstepu, to ta którą znamy dziś. Dodatkowo niektórzy producenci współczesnego DB zaczęli tworzyć utwory z dużym naciskiem na melodie prowadzące, odsówając bass w tło. Ten gatunek nazywamy melodycznym dubstepem. Jak widać nie ma prawie nic wspólnego z pierwowzroem poza mocną perkusją i mimo wszystko nadal bardzo skompikowanym, modulowanym basem. DnB wywodzi się z zupełni innych korzeni. Chodzi w nim o dużą prędkość utworu i charakterystyczny synkopowany rytm. Z czasem przyjął wiele elementów zwykłego współczesne i melodycznego dubstepu. Jest także glitch hop czyli coś w rodzaju melodycznego dubstepu ale z naciskiem na rwący się rytm, a także z mniejszym skomplikowaniem basu względem syntezatorów akordów i leadu. Zazwyczaj jest także wolniejszy niż dubstep. Mimo że z opisanej historii można wywnioskować że te style muzyczne są bardzo różne, to w praktyce wymagają podobnych zdolności od twórcy. Zaawansowana wiedza o sound designie, umiejętność zrobienia mocnej i rytmicznej perkusji i duża swoboda w dodawaniu efektów dźwiękowych.
+        </opis>
+        <artysci>Porter_Robinson Tristam</artysci>
+      </gatunek>
+      <gatunek taneczny="nieokreslone" nazwa="Trap">
+        <artysci>Gucci_Mane Aero_Chord</artysci>
+        <opis>
+          W swojej naturze podobny do hip-hopu, także może występować rapowany wokal. Ale w tym przypadku nie jest to obowiązek, gdzyż trap wykorzystując klasyczne techniki hip-hopu jak charakterystyczna perkusja, duża ilość zamkniętych talerzy a także bas 808 dodaje dodatkowo nacisk na melodie i akordy. Rzadziej wykorzystuje się gotowe sample a 808 jest często bardziej sprzesterowane. Jest to dobra opcja dla producentów muzycznych lubiących tworzyć hip-hop ale nie posiadających zdolności rapowania, mimo tego chcących tworzyć własne kompletne utwory.
+        </opis>
+      </gatunek>
+      <gatunek taneczny="nieokreslone" nazwa="Pop">
+        <opis>
+          Pop, czyli najtrudniejszy do zdefiniowania z wymienionych gatunków muzyki. Nie ma jednego sposobu w jaki pop może brzmieć. Zazwyczaj pop to ten gatunek muzyki który zmienia się z czasem, dostosowuje do trendów tak aby miał jak największą pule odbiorców. Można jednak wyróżnić kilka często przwijajćych się stylów w muzyce pop. Najbardziej rzucającym się w oczy będzie prostota sound-designu, minimalizm w użytych akordach efektach i dźwiękach. Ta prostota występuje po to aby dać miejsce dla mocnego dominującego wokalu. To że coś jest proste i minimalistyczne nie oznacza oczywiście że jest łatwe do stworzenia. Powiem więcej uważam że wymaga sporo doświadczenia i samodyscypliny, aby nie dodawać kolejnych efektów które nam się podobają. Ostatnio dominuje odłam popu zwany k-popem który łączy w sobie cechy klasycznego popu z muzyką w stylu melodic future bass z powiększonymi akordami. Future bass to muzyka która skupia się w refrenach głównie na akordach, do których dodatkiem jest wokal czy melodia, natomiast zwrotki mogą być bardzo dowolne. Future bass i K-pop są bardzo odrębnymi tworami względem popu ale wymgają podobnych umiejętności i dyscypliny producenta.
+        </opis>
+        <artysci>BTS Olivia_Rodrigo Billie_Eilish The_Weeknd Gorillaz</artysci>
+      </gatunek>
+      <gatunek taneczny="nieokreslone" nazwa="Electro/Techno">
+        <opis>
+          Techno było stylem dobrze znanym na na końcu ubiegłego wieku, mimo że teraz jego popularność znacznie zmalała, nadal ma swoją niszę odbiorców. Z kolei electro zawsze było dość niszowym gatunkiem, jednak bardzo ciekawym i charakterystycznym. Podobnie do DB. DnB i Glitch hopu kładzie duży nacisk na sound design ale charakterystyka i styl tego sound designu jest inna. Zarówno elektro jak i techno są dobrymi wyborami na start gdyż prawie nie wymagają dodatkowych pluginów, a charakterystyczne dla tych styli zimne ostre brzmienie można łatwo uzyskać podstawowymi syntezatorami.
+        </opis>
+        <artysci>Kraftwerk</artysci>
+      </gatunek>
+    </gatunki>
+  </teoria>
+
+
+</produkcjaMuzyki>
